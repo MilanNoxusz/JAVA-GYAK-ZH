@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Állomás módosítása</h1>
+<br />
+<form action="#" th:action="@{/modosit}" th:object="${stations}" method="post">
+    // value= "${dolgozo.id}": nem kötelező, mert type="hidden":
+    <p><input type="hidden" th:field="*{id}" value= "${stations.id}" /></p>
+    <p><input type="text" th:field="*{nev}" value= "${stations.nev}" required/></p>
+    <p><input type="text" th:field="*{max}" value= "${stations.max}" required/></p>
+    <p><input type="text" th:field="*{lat}" value= "${stations.lat}" required/></p>
+    <p><input type="text" th:field="*{lon}" value= "${stations.lon}" required/></p>
+
+    <p><input type="submit" value="Módosít" /></p>
+</form>
+</body>
+</html>

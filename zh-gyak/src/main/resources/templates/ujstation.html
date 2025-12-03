@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Új állomás hozzáadása</h1>
+<br />
+<form action="#" th:action="@{/ment}" th:object="${stations}" method="post">
+
+
+    <p>Név: <input type="text" th:field="*{nev}" placeholder="Név" required/></p>
+    <p>Max: <input type="text" th:field="*{max}" placeholder="Max" required/></p>
+    <p>Lat: <input type="text" th:field="*{lat}" placeholder="Lat" required/></p>
+    <p>Lon: <input type="text" th:field="*{lon}" placeholder="Lon" required/></p>
+
+    <p><input type="submit" value="Hozzáad" /></p>
+</form>
+</body>
+</html>
